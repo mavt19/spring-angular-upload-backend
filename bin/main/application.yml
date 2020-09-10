@@ -1,0 +1,33 @@
+#########DATABASE PROPERTIES##############
+#
+##### MYSQL ####
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/springAngularPaginacionPaises?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
+#    username: root
+#    password: 13111997
+##### JPA ####
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    
+##### SERVER PORT ####
+#server:
+#  port: 9898
+   
+spring:  datasource:
+    driver-class-name: org.postgresql.Driver    url: postgres://czqqdecfhykojl:c88f2b3307382b6919de73b9702c8a82890e73f21be044d99ca22652dd6c6187@ec2-52-21-247-176.compute-1.amazonaws.com:5432/d6d84kl117g1vd
+    username: czqqdecfhykojl
+    password: c88f2b3307382b6919de73b9702c8a82890e73f21be044d99ca22652dd6c6187
+    
+    
+  jpa:    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:      ddl-auto: update
+    properties:      format_sql: true
+
