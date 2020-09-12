@@ -88,7 +88,7 @@ public class ProductController {
 	}
 
 	@PutMapping("/update")
-	public ResponseEntity<?> update(@RequestParam MultipartFile file, @ModelAttribute Product product)
+	public ResponseEntity<?> update(@RequestParam( required = false) MultipartFile file, @ModelAttribute Product product)
 			throws IOException {
 		BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
 
