@@ -67,7 +67,7 @@ public class ProductController {
 	}
 
 	@PostMapping("/save")
-	public ResponseEntity<?> save(@RequestParam MultipartFile file, @ModelAttribute Product product)
+	public ResponseEntity<?> save(@RequestParam( required = false) MultipartFile file, @ModelAttribute Product product)
 			throws IOException {
 
 		BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
