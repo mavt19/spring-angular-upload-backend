@@ -70,13 +70,14 @@ public class ProductController {
 	public ResponseEntity<?> save(@RequestParam( required = false) MultipartFile file, @ModelAttribute Product product)
 			throws IOException {
 
-		BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
+		
 
 		if (file.isEmpty()) {
 			Product result = productService.save(product, file);
 			return new ResponseEntity<>(result, HttpStatus.CREATED);
 
 		}
+		BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
 		if (bufferedImage == null) {
 			return new ResponseEntity<>(new Message("image not valid"), HttpStatus.UNSUPPORTED_MEDIA_TYPE);
 
